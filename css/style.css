@@ -1,0 +1,14 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+.navbar {
+    <!-- background-color: #3f51b5;-->
+}
+
+.navbar-brand {
+    padding: 1px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
