@@ -1,14 +1,30 @@
 body {
-  min-height: 2000px;
-  padding-top: 70px;
+    min-height: 2000px;
+    padding-top: 370px;
+    background-color: #f2f2f2;
 }
 
-.navbar {
-    <!-- background-color: #3f51b5;-->
+@media (max-width: 767px) {
+     body {
+         padding-top: 120px;
+     }
 }
 
-.navbar-brand {
+#brand {
     padding: 1px;
     padding-left: 14px;
     padding-right: 14px;
+}
+
+
+.header {
+    background: url(../img/header.jpg) no-repeat 50% 0 fixed; height: 286px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+.jumbotron {
+  background-color: white;
 }

@@ -1,6 +1,6 @@
 .navbar-default {
   background-color: #3f51b5;
-  border-color: #00bfa5;
+  border-color: #3f51b5;
 }
 .navbar-default .navbar-brand {
   color: #ffffff;
@@ -70,4 +70,10 @@
     color: #eeeeee;
     background-color: #00bfa5;
   }
+}
+
+@media (min-width: 768px) {
+    .navbar-default {
+        padding: 10px;
+    }
 }
