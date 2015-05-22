@@ -1,18 +1,29 @@
 $(document).ready(ready);
 function ready(){
     
+    
+//    get the parameter from the url
     var course = getLocationValue("course");
     
+    
+    
+    // caricare i parametri della query
     var istruttori = ["Tyler", "Nicole", "Veronica"];
 
     //alert("var a = "+a);
     var level = 2;
     
     
+    //genera la time table
     var timetable = getTimeTable();
     
+    //modifica il titolo della pagine
+    document.title = "Course - " + course;
+    
+    //modifica l'immagine nella seconda navbar
     $(".navbar-inverse").css('background', 'url(../img/courses/course-header-kickboxing.jpg)')
     
+    //elabora i dati della pagina
     $("#Title").html(course);
     $("#Category").html("COMBAT");
     $("#Category").attr('href', getCategoryLink("combat"));
@@ -28,7 +39,9 @@ function ready(){
 
 }
 
-
+//funzione che analizza l'url alla ricerca del nome del parametro e restitiuisce il valore
+//param = nome del parametro
+//result valore del parametro passato
 function getLocationValue(string){
     var loc = document.location.toString()+"";
     var pos;
@@ -55,6 +68,8 @@ function getLocationValue(string){
     }
 }
     
+//funzione che costruisce la abella oraria del corso
+//result codice html del body della tabella
 function getTimeTable(){
     var result = "";
     var time = 8;
@@ -77,6 +92,7 @@ function getTimeTable(){
     return (result);
 }
 
+//funzione che selezioan l'immagine della difficolta'
 function difficultyImg(level){
     
     switch(level){
@@ -87,7 +103,9 @@ function difficultyImg(level){
     }
 }
 
-
+//funzione che genera la lista di thumbnails degli istruttori
+//param vettori di nomi degli istruttori
+//result codice html della lista di thumbnail con sorgenti immagini e link connessi correttamente
 function loadInstructors(instructors){
     var result = "<div class='row'>";
     var j = 0;
@@ -102,25 +120,32 @@ function loadInstructors(instructors){
     return result;
 }
 
+//result ritorna l'url della pagina della categoria con il parametro settato
 function getCategoryLink(category){
     return "category?name=" + category;
 }
+//ritorna la descrizione
 function getDescription(){
     return "sdbjbsdjbvjbvsbjvjbjbvzkjòvbdz   <br>    pasnoanaocnozscvzsjdvbzsdoivbuia";
 }
+//ritorna il target del corso
 function getTarget(){
     return "sdbjbsdjbvjbvsbjvjbjbvzkjòvbdz   <br>    pasnoanaocnozscvzsjdvbzsdoivbuia";
 }
+//ritorna la cateogria del corso
 function getCategory(){
     return "COMBACT";
 }
+//ritorna la roo del corso e aggiorna l'immagine
 function getRoom(){
     $("#roomimage").attr('src','img/rooms/room-combat-room.jpg');
     return "Combact Room 1";
 }
+//carica l'immagine del corso
 function getCorseImage(course){
     return "img/courses/course-" + course + ".jpg";
 }
+//carica il prezzo del corso
 function getPrice(course){
     return "Price: " + 150 + "£.";
 }

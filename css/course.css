@@ -1,13 +1,3 @@
-
-body {
-    background-color: #f2f2f2;
-}
-.jumbotron{
-    background-color: white;
-    margin: 2%;
-    padding: 2%;
-}
-
 .mainDiv {
     background-color: white;
 }
@@ -65,7 +55,3 @@ input {
 button {
     margin-left: 6%
 }
-
-
-
-
