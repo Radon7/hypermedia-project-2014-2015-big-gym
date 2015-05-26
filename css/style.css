@@ -1,7 +1,7 @@
 body {
     min-height: 2000px;
     padding-top: 370px;
-    background-color: #f2f2f2;
+    background-color: #F2F2F2;
 }
 
 @media (max-width: 767px) {
@@ -16,6 +16,16 @@ body {
     padding-right: 14px;
 }
 
+@media screen and (min-width: 768px) {
+    #second-brand {
+        font-size: 63px;
+        line-height: 0px;
+    }
+
+    .jumbotron {
+      padding: 20px 0;
+    }
+}
 
 .header {
     background: url(../img/header.jpg) no-repeat 50% 0 fixed; height: 286px;
@@ -23,8 +33,27 @@ body {
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+
 }
 
 .jumbotron {
   background-color: white;
+}
+
+.anchor {
+    display: block;
+    height: 150px;
+    margin-top: -150px;
+    visibility: hidden;
+}
+
+@media (max-width: 767px) {
+    jumbotron > h1 {
+    margin-left: 4%;
+    }
+}
+
+.thumbnail {
+    text-align: center;
+    border: none;
 }
