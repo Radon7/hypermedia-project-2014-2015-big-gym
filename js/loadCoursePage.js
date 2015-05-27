@@ -5,37 +5,19 @@ function ready(){
 //    get the parameter from the url
     var course = getLocationValue("course");
     
-    
+    getFromDB(course);
     
     // caricare i parametri della query
     var istruttori = ["Tyler", "Nicole", "Veronica"];
-
-    //alert("var a = "+a);
-    var level = 2;
-    
-    
-    //genera la time table
-    var timetable = getTimeTable();
     
     //modifica il titolo della pagine
-    document.title = "Course - " + course;
+    
     
     //modifica l'immagine nella seconda navbar
     $(".navbar-inverse").css('background', 'url(../img/courses/course-header-kickboxing.jpg)')
     
     //elabora i dati della pagina
-    $("#Title").html(course);
-    $("#Category").html("COMBAT");
-    $("#Category").attr('href', getCategoryLink("combat"));
-    $("#Description").html(getDescription());
-    $("#Target").html(getTarget());
-    $("#Category").html(getCategory());
-    $("#Room").html(getRoom());
-    $("#Courseimage").attr('src',getCorseImage(course));
-    $("#Price").html(getPrice());
     $("#instructorthumb").html(loadInstructors(istruttori));
-    $("#Difficulty").attr("src",difficultyImg(level));
-    $("#Timetable").html(timetable)
 
 }
 
@@ -113,39 +95,48 @@ function loadInstructors(instructors){
         if(j%3 == 0){
             result = result + "</div> <div class='row'>";
         }
-        result = result + " <div class='col-xs-4 col-md-4'> <div class='thumbnail'> <img src='img/instructors/instructor_"+ instructors[i] + "_320x320.jpg' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?name=" + instructors[i] + "'><h3>" + instructors[i] + "</h3></a></div></div></div>";
+        result = result + " <div class='col-xs-12 col-md-4'> <div class='thumbnail'> <img src='img/instructors/instructor_"+ instructors[i] + "_320x320.jpg' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?name=" + instructors[i] + "'><h3>" + instructors[i] + "</h3></a></div></div></div>";
         j++;
     }
     result = result + "</div></div>";
     return result;
 }
 
-//result ritorna l'url della pagina della categoria con il parametro settato
-function getCategoryLink(category){
-    return "category?name=" + category;
-}
-//ritorna la descrizione
-function getDescription(){
-    return "sdbjbsdjbvjbvsbjvjbjbvzkjòvbdz   <br>    pasnoanaocnozscvzsjdvbzsdoivbuia";
-}
-//ritorna il target del corso
-function getTarget(){
-    return "sdbjbsdjbvjbvsbjvjbjbvzkjòvbdz   <br>    pasnoanaocnozscvzsjdvbzsdoivbuia";
-}
-//ritorna la cateogria del corso
-function getCategory(){
-    return "COMBACT";
-}
-//ritorna la roo del corso e aggiorna l'immagine
-function getRoom(){
-    $("#roomimage").attr('src','img/rooms/room-combat-room.jpg');
-    return "Combact Room 1";
-}
-//carica l'immagine del corso
-function getCorseImage(course){
-    return "img/courses/course-" + course + ".jpg";
-}
-//carica il prezzo del corso
-function getPrice(course){
-    return "Price: " + 150 + "£.";
+function getFromDB(id){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "js/loadcourse.php", //Relative or absolute path to file.php file
+        data: {course:id},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var course=JSON.parse(response);
+            console.log(course);
+            document.title = "Course - " + course[0].name1;
+            $("#Title").html(course[0].coursename);
+            $("#Category").html(course[0].categoryname);
+            $("#Category").attr('href', "category?id=" + course[0].id);
+            $("#Description").html(course[0].description);
+            $("#Target").html(course[0].target);
+            //$("#Category").html(course[0].name);
+            $("#Room").html(course[0].room_id);
+            $("#Courseimage").attr('src',course[0].courseid + ".jpg");
+            $("#Price").html( "Price: " + course[0].price + "&pound.");
+            
+            /*switch(parseInt(course[0].difficulty){
+                case 0: $("#Difficulty").attr("src",'img/easy.jpg');break;
+                case 1: $("#Difficulty").attr("src",'img/medium.jpg');break;
+                case 2: console.log("caso difficile");$("#Difficulty").attr("src",'img/hard.jpg');break;
+                default: $("#Difficulty").attr("src",'');
+            }*/
+            $("#Difficulty").attr("src",'img/' + course[0].difficulty + '.jpg');
+            
+            $("#Timetable").html(getTimeTable);
+        },
+        error: function(request,error) 
+        {
+            console.log("Error");
+        }
+    });
 }
