@@ -6,18 +6,13 @@ function ready(){
     var course = getLocationValue("course");
     
     getFromDB(course);
-    
-    // caricare i parametri della query
-    var istruttori = ["Tyler", "Nicole", "Veronica"];
+    getInstructorFromDB(course);
     
     //modifica il titolo della pagine
     
     
     //modifica l'immagine nella seconda navbar
     $(".navbar-inverse").css('background', 'url(../img/courses/course-header-kickboxing.jpg)')
-    
-    //elabora i dati della pagina
-    $("#instructorthumb").html(loadInstructors(istruttori));
 
 }
 
@@ -107,7 +102,7 @@ function getFromDB(id){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "js/loadcourse.php", //Relative or absolute path to file.php file
+        url: "php/getCourse.php", //Relative or absolute path to file.php file
         data: {course:id},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -133,6 +128,37 @@ function getFromDB(id){
             $("#Difficulty").attr("src",'img/' + course[0].difficulty + '.jpg');
             
             $("#Timetable").html(getTimeTable);
+        },
+        error: function(request,error) 
+        {
+            console.log("Error");
+        }
+    });
+}
+
+function getInstructorFromDB(id){
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "php/loadcourseinstructor.php", //Relative or absolute path to file.php file
+        data: {course:id},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var instructors=JSON.parse(response);
+            console.log(course);
+            
+            var result = "<div class='row'>";
+            var j = 0;
+            for(var i = 0; i < instructors.length; i++){
+                if(j%3 == 0){
+                    result = result + "</div> <div class='row'>";
+                }
+                result = result + " <div class='col-xs-12 col-md-4'> <div class='thumbnail'> <img src='img/instructors/instructor_"+ instructors[i].id + "_320x320.jpg' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?name=" + instructors[i].id + "'><h3>" + instructors[i].name + " " + instructors[i].surname + "</h3></a></div></div></div>";
+                j++;
+            }
+            result = result + "</div></div>";
+            $("#instructorthumb").html(result);
+            
         },
         error: function(request,error) 
         {

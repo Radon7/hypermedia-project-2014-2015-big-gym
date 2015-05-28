@@ -14,7 +14,7 @@ function getFromDB(id){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "js/loadAllCategory.php", //Relative or absolute path to file.php file
+        url: "php/loadAllCategories.php", //Relative or absolute path to file.php file
         data: {course:id},
         success: function(response) {
             console.log(JSON.parse(response));
