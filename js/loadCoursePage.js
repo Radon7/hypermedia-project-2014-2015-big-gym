@@ -3,7 +3,9 @@ function ready(){
     
     
 //    get the parameter from the url
-    var course = getLocationValue("course");
+    var course = getLocationValue("id");
+    
+    console.log(course);
     
     getFromDB(course);
     getInstructorFromDB(course);
@@ -103,7 +105,7 @@ function getFromDB(id){
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
         url: "php/getCourse.php", //Relative or absolute path to file.php file
-        data: {course:id},
+        data: {course_id:id},
         success: function(response) {
             console.log(JSON.parse(response));
             var course=JSON.parse(response);
@@ -136,16 +138,17 @@ function getFromDB(id){
     });
 }
 
-function getInstructorFromDB(id){
+function getInstructorFromDB(name){
+    $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/loadCourseInstructors.php", //Relative or absolute path to file.php file
-        data: {course:id},
+        url: "php/getCourseInstructors.php", //Relative or absolute path to file.php file
+        data: {course_id:name},
         success: function(response) {
             console.log(JSON.parse(response));
             var instructors=JSON.parse(response);
-            console.log(course);
+            console.log(instructors);
             
             var result = "<div class='row'>";
             var j = 0;
