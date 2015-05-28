@@ -2,9 +2,9 @@ $(document).ready(ready);
 
 function ready(){
 
-    var id= 3;
+    var id= 2;
 
-    $(".navbar-inverse").css('background', 'url(./img/categories/category-header-mind-and-body.jpg)');
+    $(".navbar-inverse").css('background', 'url(./img/categories/category-header-'+id+'.jpg)');
 
     getCatAboutDescription(id);
     getCatInstructorsList(id);
@@ -17,7 +17,7 @@ function getCatAboutDescription(id) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "getCategory.php", //Relative or absolute path to file.php file
+        url: "php/getCategory.php", //Relative or absolute path to file.php file
         data: {category_id: id},
         success: function(response) {
             var cat_about, cat_name;
@@ -29,6 +29,7 @@ function getCatAboutDescription(id) {
             //Title of the page
             document.title = cat_name+" Category";
             //What is this category about?
+            $("#cat_about_image").attr('src', 'img/categories/category-'+id+'.jpg');
             cat_about = category[0].about;
             $("#cat_about_description").html(cat_about)
             },
@@ -44,7 +45,7 @@ function getCatInstructorsList(id) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "getCategoryInstructors.php", //Relative or absolute path to file.php file
+        url: "php/getCategoryInstructors.php", //Relative or absolute path to file.php file
         data: {category_id: id},
         success: function(response) {
             var result = "";

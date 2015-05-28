@@ -8,7 +8,7 @@ $mysqli = new mysqli("localhost", "root", "", "my_bigym");
 
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
-    exit(); //do nothing else 
+    exit(); //do nothing else
 }
 else {
     //echo "Successful connection"; // connection ok

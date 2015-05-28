@@ -1,6 +1,6 @@
 $(document).ready(ready);
 function ready(){
-    
+
     //var category = ["Combat", "Dance", "Mind-And-Body", "Water-Based", "Workout"];
     getFromDB(1);
 
@@ -14,7 +14,7 @@ function getFromDB(id){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/loadAllCategories.php", //Relative or absolute path to file.php file
+        url: "php/getAllCategories.php", //Relative or absolute path to file.php file
         data: {course:id},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -31,7 +31,7 @@ function getFromDB(id){
             result = result + "</div></div>";
             $("#thumblist").html(result);
         },
-        error: function(request,error) 
+        error: function(request,error)
         {
             console.log("Error " + error);
         }
