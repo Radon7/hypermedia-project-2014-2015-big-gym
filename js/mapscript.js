@@ -24,6 +24,6 @@ function initialize() {
     var marker = new google.maps.Marker({
       position: new google.maps.LatLng(lat,lon),
       map: map,
-      title: 'Byg Gym \n 84 Hills Rd \n 84 Hills Rd, Cambridge CB2 1PG, Regno Unito'
+      title: 'Byg Gym \n 84 Hills Rd \n 84 Hills Rd, Cambridge CB2 1PG, UK'
   });
 }
