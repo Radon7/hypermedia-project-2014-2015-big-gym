@@ -17,7 +17,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = "SELECT id, name, surname FROM instructor JOIN teaching_course ON instructor.id = teaching_course.instructor_id WHERE teaching_course.course_id = $id ";
+    $query = "SELECT id, name, surname, image_1 FROM instructor JOIN teaching_course ON instructor.id = teaching_course.instructor_id WHERE teaching_course.course_id = $id ";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available

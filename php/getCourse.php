@@ -7,7 +7,7 @@
 $mysqli = new mysqli("localhost", "root", "", "my_bigym");
 
 
-$id = $_POST["course_id"];
+$id = 2;//$_POST["course_id"];
 
 if (mysqli_connect_errno()) { //verify connection
     echo "Error to connect to DBMS: ".mysqli_connect_error(); //notify error
@@ -17,7 +17,7 @@ else {
     //echo "Successful connection"; // connection ok
 
     # extract results mysqli_result::fetch_array
-    $query = "SELECT course.id AS courseid, course.name AS coursename, course.description, course.difficulty, course.target, course.room_id, course.price, category.name AS categoryname, category.id AS categoryid from course Join category On course.category_id = category.id Where course.id = $id";
+    $query = "SELECT course.id AS courseid, course.name AS coursename, course.description, course.difficulty, course.target, room.name AS room_name, room.image AS room_image, course.price, category.name AS categoryname, category.id AS categoryid, course.schedule, course.image AS course_image, course.image_header from course Join category JOIN room On course.category_id = category.id AND course.room_id = room.id Where course.id = $id";
     //query execution
     $result = $mysqli->query($query);
     //if there are data available
