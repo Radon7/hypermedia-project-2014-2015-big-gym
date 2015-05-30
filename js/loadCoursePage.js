@@ -151,8 +151,12 @@ function getFromDB(id){
             var ret = getTimeTable(course[0].schedule);
             $("#Timetable").html(ret);
             
-            //modifica l'immagine nella seconda navbar
+            //modifica l'immagine nella seconda navbar  
             $(".navbar-inverse").css('background', 'url(img/courses/' + course[0].image_header + ')');
+            $(".navbar-inverse").css('-webkit-background-size','cover');
+            $(".navbar-inverse").css('-moz-background-size','cover');
+            $(".navbar-inverse").css('-o-background-size','cover');
+            $(".navbar-inverse").css('background-size','cover');
         },
         error: function(request,error) 
         {

@@ -6,6 +6,10 @@ function ready(){
 
     //alert("var a = "+a);
     $(".navbar-inverse").css('background', 'url(img/all-categories-header.jpg)');
+    $(".navbar-inverse").css('-webkit-background-size','cover');
+    $(".navbar-inverse").css('-moz-background-size','cover');
+    $(".navbar-inverse").css('-o-background-size','cover');
+    $(".navbar-inverse").css('background-size','cover');
 
 }
 
