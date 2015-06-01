@@ -110,15 +110,20 @@
             <p>We have over 20 different courses to suit all ages and abilities. To help you find the course that is right for you, we've split them into five different categories. These categories are identified on the different types of training and activities that the courses required. Click on a class category to see the descriptions of the category and a summary of all courses of that category. </p>
         </div>
 
+        <!-- radio buttons to choose how to order the list -->
         <div class="btn-group btn-group-justified btn-group-lg" data-toggle="buttons" id="change_order">
             <label class="btn btn-primary active" id="sort_alph">
-                <input type="radio" name="options"  autocomplete="off" checked> Sort by alphabetical order
+                <input type="radio" name="options" autocomplete="off" checked>
+                    <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span><span class="hidden-xs">  Sort by alphabetical order</span>
             </label>
             <label class="btn btn-primary" id="sort_diff">
-                <input type="radio" name="options"  autocomplete="off"> Sort by difficulty
+                <input type="radio" name="options" autocomplete="off">
+                <span class="glyphicon glyphicon-sort-by-attributes" aria-hidden="true"></span><span class="hidden-xs">  Sort by difficulty</span>
             </label>
         </div>
 
+
+        <!-- here there is the list of all courses -->
         <div class="jumbotron" id="allcourses_list">
 
         </div>

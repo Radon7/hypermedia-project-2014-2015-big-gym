@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <!-- Fixed navbar -->
+        <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -44,14 +44,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand" class="navbar-brand" href="#">
+                <a id="brand" class="navbar-brand" href="index.html">
                     <img alt="Brand" class="img-responsive" src="img/LOGO.png">
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">About <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Our Gym</a>
                             </li>
@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Instructors <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Instructors of the month</a>
                             </li>
@@ -73,7 +73,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">All courses</a>
                             </li>
@@ -133,12 +133,12 @@
 
     <div class="container">
 
-       <div class="jumbotron">
+       <div class="jumbotron" id="cgt">
            <nav>
               <ul class="pager">
-                <li><a href="#">Previous</a></li>
+                <li><a href="#" id="previousCat">Previous</a></li>
                 <a href="allcoursecategories.html">Go back to all categories</a>
-                <li><a href="#">Next</a></li>
+                <li><a href="#" id="nextCat">Next</a></li>
               </ul>
             </nav>
        </div>

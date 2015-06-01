@@ -14,6 +14,27 @@ html {
     height: 100%;
 }
 
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-text {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #3f51b5;
+}
+
 @media(min-width:768px) {
     .navbar-inverse {
         padding: 20px 0;
@@ -25,6 +46,11 @@ html {
 
     .top-nav-collapse {
         padding: 0;
+    }
+
+     #second-brand {
+        font-size: 27px;
+        line-height: 20px;
     }
 }
 

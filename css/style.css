@@ -17,23 +17,10 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-    #second-brand {
-        font-size: 63px;
-        line-height: 0px;
-    }
 
     .jumbotron {
       padding: 20px 0;
     }
-}
-
-.header {
-    background: url(../img/header.jpg) no-repeat 50% 0 fixed; height: 286px;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-
 }
 
 .jumbotron {
@@ -56,4 +43,9 @@ body {
 .thumbnail {
     text-align: center;
     border: none;
+}
+
+.pager {
+  padding-left: 0;
+  margin: 0px 0;
 }
