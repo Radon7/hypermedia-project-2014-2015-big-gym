@@ -77,3 +77,8 @@
         padding: 10px;
     }
 }
+
+.navbar .dropdown-menu>li>a, .navbar .dropdown-menu>li>a:focus {
+    font-size: 14px;
+    padding: 12px;
+}

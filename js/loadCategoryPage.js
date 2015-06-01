@@ -121,8 +121,8 @@ function getCatIDs(id) {
                         }
                     }
                 }
-            $("#previousCat").attr('href', 'category.html?id='+previous);
-            $("#nextCat").attr('href', 'category.html?id='+next);
+            $("#previousCat").attr('href', 'category.html?id='+previous+'&cgt=1');
+            $("#nextCat").attr('href', 'category.html?id='+next+'&cgt=1');
             },
         error: function(request,error) {
             console.log("Error");
