@@ -32,7 +32,7 @@
     <![endif]-->
 </head>
 
-<body>
+<body id="page-top">
     <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -43,14 +43,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="brand" class="navbar-brand" href="#">
+                <a id="brand" class="navbar-brand" href="index.html">
                     <img alt="Brand" class="img-responsive" src="img/LOGO.png">
                 </a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">About <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Our Gym</a>
                             </li>
@@ -63,7 +63,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Instructors <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Instructors of the month</a>
                             </li>
@@ -72,11 +72,11 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Courses <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">All courses</a>
+                            <li><a href="allcourses.html">All courses</a>
                             </li>
-                            <li><a href="#">All categories</a>
+                            <li><a href="allcoursecategories.html">All categories</a>
                             </li>
                             <li><a href="#">Schedule</a>
                             </li>
@@ -86,7 +86,7 @@
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Contact Us</a>
+                    <li><a href="contact-us.html">Contact Us</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +113,7 @@
         <div class="btn-group btn-group-justified btn-group-lg" data-toggle="buttons" id="change_order">
             <label class="btn btn-primary active" id="sort_alph">
                 <input type="radio" name="options" autocomplete="off" checked>
-                    <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span><span class="hidden-xs">    Sort by alphabetical order</span>
+                <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true"></span><span class="hidden-xs">    Sort by alphabetical order</span>
             </label>
             <label class="btn btn-primary" id="sort_diff">
                 <input type="radio" name="options" autocomplete="off">
@@ -139,6 +139,9 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Bootstrap Dropdown Hover JS -->
+    <script src="js/bootstrap-dropdownhover.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/scrolling-nav.js"></script>
