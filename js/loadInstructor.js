@@ -45,6 +45,22 @@ function getInstructorInfo(variable) {
             
             //carico la gallery
             $("#gallery").html('<div class="item active"><img src="'+'./img/instructors/'+instr[0].image_1+'" alt="..."></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Chania"></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Flower"></div>' );
+            
+            //load the twitter account info
+            $(".twitter-timeline").attr("href", "https://twitter.com/"+instr[0].twitter_account);
+            $(".twitter-timeline").attr("data-widget-id", instr[0].widget_id);
+            $(".twitter-timeline").text("Tweets by @"+instr[0].twitter_account);
+            
+             ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + "://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, "script", "twitter-wjs");
              //img_chania.jpgimg_chania2.jpgimg_flower.jpg
         },
         error: function (request, error) {
@@ -68,7 +84,7 @@ function getCourses(variable) {
             console.log(cour);
             var el = "";
             for (var i = 0; i < cour.length; i++) {
-                el += '<a href="course.html?course=' + cour[i].id + '">' + cour[i].name + '</a><br>';
+                el += '<a href="course.html?id=' + cour[i].id + '">' + cour[i].name + '</a><br>';
             }
             $("#cour").html(el);
         },
