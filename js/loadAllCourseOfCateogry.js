@@ -72,7 +72,7 @@ function getFromDB(id, nav){
                 if(j%3 == 0){
                     result = result + "</div> <div class='row'>";
                 }
-                result = result + " <div class='col-xs-12 col-sm-6 col-md-4'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].thumbnail + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'><a href='category.html?category_id=" + courses[i].course_id + "'><h3>" + courses[i].course_name + "</h3></a></div></div></div>";
+                result = result + " <div class='col-xs-12 col-sm-6 col-md-4'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].thumbnail + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'><a href='course.html?id=" + courses[i].course_id + "'><h3>" + courses[i].course_name + "</h3></a></div></div></div>";
                 j++;
             }
             result = result + "</div></div>";

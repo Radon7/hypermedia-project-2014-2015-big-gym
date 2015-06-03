@@ -183,7 +183,7 @@ function getInstructorFromDB(name){
                 if(j%3 == 0){
                     result = result + "</div> <div class='row'>";
                 }
-                result = result + " <div class='col-xs-12 col-md-4'> <div class='thumbnail'> <img src='img/instructors/"+ instructors[i].image_1 + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?name=" + instructors[i].id + "'><h3>" + instructors[i].name + " " + instructors[i].surname + "</h3></a></div></div></div>";
+                result = result + " <div class='col-xs-12 col-md-4'> <div class='thumbnail'> <img src='img/instructors/"+ instructors[i].image_1 + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?id=" + instructors[i].id + "'><h3>" + instructors[i].name + " " + instructors[i].surname + "</h3></a></div></div></div>";
                 j++;
             }
             result = result + "</div></div>";
