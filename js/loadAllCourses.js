@@ -9,6 +9,7 @@ function ready(){
     $(".navbar-inverse").css('background-size','cover');
     //initially load the page with alphabetical order
     getAllCourses("ALPHABETICAL");
+    getDescription();
 
     $('#sort_alph').on('click', sortByAlph);
 
@@ -47,6 +48,26 @@ function getAllCourses(ordering) {
             }
             result = result + "</div></div>";
             $("#allcourses_list").html(result)
+            },
+        error: function(request,error) {
+            console.log("Error");
+        }
+    });
+}
+
+function getDescription() {
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "php/getIntro.php", //Relative or absolute path to file.php file
+        data: {page: "allcourses"},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var intro=JSON.parse(response);
+            var result = intro[0].description;
+            $("#allcoursesdescription").html(result);
             },
         error: function(request,error) {
             console.log("Error");

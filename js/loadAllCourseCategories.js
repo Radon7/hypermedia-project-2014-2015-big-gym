@@ -11,6 +11,8 @@ function ready(){
     $(".navbar-inverse").css('-o-background-size','cover');
     $(".navbar-inverse").css('background-size','cover');
 
+    getDescription();
+
 }
 
 function getFromDB(id){
@@ -38,6 +40,27 @@ function getFromDB(id){
         error: function(request,error)
         {
             console.log("Error " + error);
+        }
+    });
+}
+
+
+function getDescription() {
+
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "php/getIntro.php", //Relative or absolute path to file.php file
+        data: {page: "allcoursecategories"},
+        success: function(response) {
+            console.log(JSON.parse(response));
+            var intro=JSON.parse(response);
+            var result = intro[0].description;
+            $("#allcoursecategoriesdescription").html(result);
+            },
+        error: function(request,error) {
+            console.log("Error");
         }
     });
 }
