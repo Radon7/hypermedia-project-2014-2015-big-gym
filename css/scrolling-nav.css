@@ -100,11 +100,7 @@ of those sections to manage the look and feel of the site. */
 }
 
 .navbar-inverse {
-    background: url(../img/header.jpg);
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
+    background-color: #f2f2f2;
     z-index: 999;
 
 }
