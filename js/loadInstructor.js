@@ -34,6 +34,7 @@ function getInstructorInfo(variable) {
             console.log(JSON.parse(response));
             var instr = JSON.parse(response);
             console.log(instr);
+            document.title(instr[0].name + " " + instr[0].surname);
             $("#second-brand").html(instr[0].name + " " + instr[0].surname);
             $("#img_bio").attr("src", "./img/instructors/"+ instr[0].image_1);
             $("#instr_bio").html(instr[0].about);
