@@ -123,7 +123,7 @@ function getFromDB(id){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getCourse.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getCourse.php", //Relative or absolute path to file.php file
         data: {course_id:id},
         success: function(response) {
             console.log(JSON.parse(response));
@@ -170,7 +170,7 @@ function getInstructorFromDB(name){
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getCourseInstructors.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getCourseInstructors.php", //Relative or absolute path to file.php file
         data: {course_id:name},
         success: function(response) {
             console.log(JSON.parse(response));

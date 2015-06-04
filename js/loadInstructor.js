@@ -14,11 +14,6 @@ function readyf() {
     getInstructorInfo(id);
     getCourses(id);
     getCategories(id);
-
-
-
-
-
 }
 
 function getInstructorInfo(variable) {
@@ -26,7 +21,7 @@ function getInstructorInfo(variable) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getInstructor.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getInstructor.php", //Relative or absolute path to file.php file
         data: {
             id: id
         },
@@ -75,7 +70,7 @@ function getCourses(variable) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getTeachedCourses.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getTeachedCourses.php", //Relative or absolute path to file.php file
         data: {
             id: id
         },
@@ -100,7 +95,7 @@ function getCategories(variable) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getTeachedCategories.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getTeachedCategories.php", //Relative or absolute path to file.php file
         data: {
             id: id
         },

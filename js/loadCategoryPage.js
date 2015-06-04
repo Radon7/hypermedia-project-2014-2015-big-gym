@@ -42,7 +42,7 @@ function getCatAboutDescription(id) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getCategory.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getCategory.php", //Relative or absolute path to file.php file
         data: {category_id: id},
         success: function(response) {
             var cat_about, cat_name;
@@ -76,7 +76,7 @@ function getCatInstructorsList(id) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getCategoryInstructors.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getCategoryInstructors.php", //Relative or absolute path to file.php file
         data: {category_id: id},
         success: function(response) {
             var result = "";
@@ -100,7 +100,7 @@ function getCatIDs(id) {
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getCategoryIDs.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getCategoryIDs.php", //Relative or absolute path to file.php file
         data: {},
         success: function(response) {
             var next, previous;

@@ -12,22 +12,23 @@ function fready() {
         google.maps.event.trigger(map, "resize");
         map.setCenter(center);
     });
-    
-   $(".navbar-inverse").css('background', 'url(./img/contact-us-header.jpg)');
-   $(".navbar-inverse").css('-webkit-background-size','cover');
-    $(".navbar-inverse").css('-moz-background-size','cover');
-    $(".navbar-inverse").css('-o-background-size','cover');
-    $(".navbar-inverse").css('background-size','cover');
+
+    $(".navbar-inverse").css('background', 'url(./img/contact-us-header.jpg)');
+    $(".navbar-inverse").css('-webkit-background-size', 'cover');
+    $(".navbar-inverse").css('-moz-background-size', 'cover');
+    $(".navbar-inverse").css('-o-background-size', 'cover');
+    $(".navbar-inverse").css('background-size', 'cover');
 
 
 }
+
 function initialize() {
 
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
         crossDomain: true, //localhost purposes
-        url: "php/getLocation.php", //Relative or absolute path to file.php file
+        url: "http://bigym.altervista.org/php/getLocation.php", //Relative or absolute path to file.php file
         //data: {order: ordering},
         success: function (response) {
             console.log(response);
@@ -64,6 +65,5 @@ function initialize() {
             console.log("Error");
         }
     });
-
 
 }
