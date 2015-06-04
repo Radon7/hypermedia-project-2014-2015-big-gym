@@ -130,7 +130,7 @@ function getFromDB(id){
             var course=JSON.parse(response);
             console.log(course);
             document.title = "Course - " + course[0].coursename;
-            $("#Title").html(course[0].coursename);
+            $("#second-brand").html(course[0].coursename);
             $("#Category").html(course[0].categoryname);
             $("#Category").attr('href', "category.html?id=" + course[0].categoryid);
             $("#Description").html(course[0].description);

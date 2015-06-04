@@ -38,7 +38,7 @@
 </head>
 
 <body>
-        <!-- Fixed navbar -->
+    <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -55,7 +55,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Our Gym</a>
                             </li>
@@ -68,7 +68,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Instructors of the month</a>
                             </li>
@@ -77,7 +77,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="allcourses.html">All courses</a>
                             </li>
@@ -120,13 +120,13 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#cat_about">What is about?</a>
+                        <a class="page-scroll" href="#cat_about">Category Info</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#cat_video">Promo video</a>
+                        <a class="page-scroll" href="#cat_video">Promo Video</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#cat_instructors">Category instructors</a>
+                        <a class="page-scroll" href="#cat_instructors">Category Instructors</a>
                     </li>
                 </ul>
             </div>
@@ -137,26 +137,28 @@
 
     <div class="container">
 
-       <div class="jumbotron" id="cgt">
-           <nav>
-              <ul class="pager">
-                <li><a href="#" id="previousCat">Previous</a></li>
-                <a href="allcoursecategories.html">Go back to all categories</a>
-                <li><a href="#" id="nextCat">Next</a></li>
-              </ul>
+        <div class="jumbotron" id="cgt">
+            <nav>
+                <ul class="pager">
+                    <li><a href="#" id="previousCat">Previous</a>
+                    </li>
+                    <a href="allcoursecategories.html">Go back to all categories</a>
+                    <li><a href="#" id="nextCat">Next</a>
+                    </li>
+                </ul>
             </nav>
-       </div>
+        </div>
 
         <span class="anchor" id="cat_about"></span>
         <div class="jumbotron">
 
-                <h1>What is this category about?</h1>
-                <div class="row">
+            <h1>What is this category about?</h1>
+            <div class="row">
                 <div class="col-xs-12 col-md-4">
                     <div class="thumbnail">
-                        <img src="" alt="..." id= "cat_about_image">
+                        <img src="" alt="..." id="cat_about_image">
                         <div class="caption">
-                            <p><a href="#" class="btn btn-primary btn-block" role="button">See all courses of this category</a>
+                            <p><a href="#" id="courses_of_this_cat">See all courses of this category</a>
                             </p>
                         </div>
                     </div>
@@ -167,15 +169,15 @@
             </div>
         </div>
 
-       <span class="anchor" id="cat_video"></span>
+        <span class="anchor" id="cat_video"></span>
         <div class="jumbotron">
-                <h1>See this promo video </h1>
-                <div class="jumbotron" >
-                   <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-YQHrqBDIok"frameborder="0" allowfullscreen></iframe>
-                    </div>
+            <h1>See this promo video </h1>
+            <div class="jumbotron">
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" frameborder="0" allowfullscreen id="promo_video"></iframe>
                 </div>
+            </div>
 
         </div>
 

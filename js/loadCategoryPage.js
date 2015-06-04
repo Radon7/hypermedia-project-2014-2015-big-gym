@@ -63,6 +63,9 @@ function getCatAboutDescription(id) {
             $("#cat_about_image").attr('src', 'img/categories/'+category[0].image);
             cat_about = category[0].about;
             $("#cat_about_description").html(cat_about);
+            $("#courses_of_this_cat").attr('href', 'allcoursesofcategory.html?id='+category[0].id);
+            //Promo Video
+            $("#promo_video").attr('src', category[0].promo_video);
             },
         error: function(request,error) {
             console.log("Error");

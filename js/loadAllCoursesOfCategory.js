@@ -49,7 +49,7 @@ function getFromDB(id, nav){
             var courses=JSON.parse(response);
             console.log(courses);
             document.title = "All Courses of category " + courses[0].category_name;
-            $("#Title").html(courses[0].category_name + " Courses");
+            $("#second-brand").html(courses[0].category_name + " Courses");
             //modifica l'immagine nella seconda navbar
             $(".navbar-inverse").css('background', 'url(img/categories/' + courses[0].image_header + ')');
             $(".navbar-inverse").css('-webkit-background-size','cover');
