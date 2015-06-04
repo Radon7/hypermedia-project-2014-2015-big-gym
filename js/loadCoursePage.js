@@ -132,7 +132,7 @@ function getFromDB(id){
             document.title = "Course - " + course[0].coursename;
             $("#Title").html(course[0].coursename);
             $("#Category").html(course[0].categoryname);
-            $("#Category").attr('href', "category?id=" + course[0].id);
+            $("#Category").attr('href', "category.html?id=" + course[0].categoryid);
             $("#Description").html(course[0].description);
             $("#Target").html(course[0].target);
             $("#Room").html(course[0].room_name);
