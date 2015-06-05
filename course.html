@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
+    <!--    form icons-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
      <!-- Bootstrap Dropdown Hover CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/bootstrap-dropdownhover.css" rel="stylesheet">
@@ -22,6 +24,7 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/course.css">
+    <link href="css/form.css"  type="text/css" rel="stylesheet">
 
     <title>Course</title>
 
@@ -205,19 +208,25 @@
 
         <!--        section of the enroll form-->
         <span class="anchor" id="Enr"></span>
-        <div class="jumbotron">
+        <div class="jumbotron">         
+        <form action="/">
             <h1>Enroll in this Course</h1>
+            <hr>
             <h3 id="Price"></h3>
-            <form>
-                <input type="text" name="FirstName" placeholder="Your name">
-                <br>
-                <input type="password" name="Password" placeholder="Your password">
-                <br>
-                <input type="button" value="CONFIRM"></input>
-                <div class="textdiv">
-                    You will be redirect to our payment platform
-                </div>
-            </form>
+            <div>
+                  <label id="icon" for="name"><i class="icon-envelope "></i></label>
+                  <input type="text" name="name" id="name" placeholder="Email" required/>
+                  <br>
+                  <label id="icon" for="name"><i class="icon-user"></i></label>
+                  <input type="text" name="name" id="name" placeholder="Name" required/>
+                  <br>
+                  <label id="icon" for="name"><i class="icon-shield"></i></label>
+                  <input type="password" name="name" id="name" placeholder="Password" required/>
+            </div>
+            <hr>
+           <a href="#" class="button">Register</a>
+                You will be redirect to our payment platform
+    </form>
         </div>
     </div>
 
