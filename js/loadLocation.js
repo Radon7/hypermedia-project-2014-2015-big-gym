@@ -39,6 +39,7 @@ function initialize() {
             $("#fax").html(info[0].fax);
             $("#mobile").html(info[0].mobile);
             $("#mail").html(info[0].mail);
+            $("#mail").attr("href", "mailto:"+info[0].mail);
             $("#by_car").html(info[0].by_car);
 
             lat = info[0].lat;
