@@ -38,15 +38,13 @@ function getAllCourses(ordering) {
             var courses=JSON.parse(response);
 
             var result = "<div class='row'>";
-            var j = 0;
             for(var i = 0; i < courses.length; i++){
-                if(j%4 == 0){
+                if(i%4 == 0){
                     result = result + "</div> <div class='row'>";
                 }
-                 result = result + " <div class='col-xs-12 col-sm-4 col-md-3'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].course_thumbnail +"' alt='Image not available, sorry.' class='img-responsive'> <div class='caption'> <a href='course.html?id=" + courses[i].id + "'><h3>" + courses[i].course_name + "</h3></a> Category: " + courses[i].category_name + "<br> Level: "+ courses[i].difficulty+"</div> </div> </div>";
-                j++;
+                 result = result + " <div class='col-xs-12 col-sm-6 col-md-3'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].course_thumbnail +"' alt='Image not available, sorry.' class='img-responsive'> <div class='caption'> <a href='course.html?id=" + courses[i].id + "'><h3>" + courses[i].course_name + "</h3></a> Category: " + courses[i].category_name + "<br> Level: "+ courses[i].difficulty+"</div> </div> </div>";
             }
-            result = result + "</div></div>";
+            result = result + "</div>";
             $("#allcourses_list").html(result)
             },
         error: function(request,error) {
