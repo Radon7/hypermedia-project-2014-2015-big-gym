@@ -69,3 +69,23 @@ address {
 .navbar {
   font-size: 15px;
 }
+
+#myCarousel {
+    width: 85%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.basic {
+    font-weight: 500;
+    color: green;
+}
+.medium {
+    font-weight: 500;
+    color: orange;
+}
+.advanced {
+    font-weight: 500;
+    color: red;
+}

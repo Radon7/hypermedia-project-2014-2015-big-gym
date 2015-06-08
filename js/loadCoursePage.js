@@ -90,17 +90,6 @@ function isIn(i, j, tab){
     return false;
 }
 
-//funzione che selezioan l'immagine della difficolta'
-function difficultyImg(level){
-    
-    switch(level){
-        case 0: return('img/easy.jpg');
-        case 1: return('img/medium.jpg');
-        case 2: return('img/hard.jpg');
-        default: return('');
-    }
-}
-
 //funzione che genera la lista di thumbnails degli istruttori
 //param vettori di nomi degli istruttori
 //result codice html della lista di thumbnail con sorgenti immagini e link connessi correttamente
@@ -139,14 +128,18 @@ function getFromDB(id){
             $("#Courseimage").attr('src','img/courses/' + course[0].course_image);
             $("#roomimage").attr('src','img/rooms/' + course[0].room_image);
             $("#Price").html( "Price: " + course[0].price + "&pound.");
-            var dif;
             switch(parseInt(course[0].difficulty)){
-                case 0: dif = "easy.jpg"; break;
-                case 1: dif = "medium.jpg"; break;
-                case 2: dif = "hard.jpg"; break;
-                default: dif = "";
+                case 0:
+                    $("#Difficulty").html("Difficulty: <span class='basic'>Basic</span>");
+                    break;
+                case 1:
+                    $("#Difficulty").html("Difficulty: <span class='medium'>Medium</span>");
+                    break;
+                case 2:
+                    $("#Difficulty").html("Difficulty: <span class='advanced'>Advanced</span>");
+                    break;
+                default: break;
             }
-            $("#Difficulty").attr("src",'img/' + dif);
             console.log(course[0].schedule);
             var ret = getTimeTable(course[0].schedule);
             $("#Timetable").html(ret);
@@ -183,7 +176,7 @@ function getInstructorFromDB(name){
                 if(j%3 == 0){
                     result = result + "</div> <div class='row'>";
                 }
-                result = result + " <div class='col-xs-12 col-md-4'> <div class='thumbnail'> <img src='img/instructors/"+ instructors[i].image_1 + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?id=" + instructors[i].id + "'><h3>" + instructors[i].name + " " + instructors[i].surname + "</h3></a></div></div></div>";
+                result = result + " <div class='col-xs-12 col-md-6'> <div class='thumbnail'> <img src='img/instructors/"+ instructors[i].image_1 + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'> <a href='instructor.html?id=" + instructors[i].id + "'><h3>" + instructors[i].name + " " + instructors[i].surname + "</h3></a></div></div></div>";
                 j++;
             }
             result = result + "</div></div>";

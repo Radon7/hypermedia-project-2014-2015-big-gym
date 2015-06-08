@@ -7,15 +7,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="img/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    
-    
-     <!-- Bootstrap Dropdown Hover CSS -->
+    <!-- Bootstrap Dropdown Hover CSS -->
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/bootstrap-dropdownhover.css" rel="stylesheet">
 
@@ -24,8 +22,8 @@
     <link href="css/scrolling-nav.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/course.css">
-    <link href="css/form.css"  type="text/css" rel="stylesheet">
-    
+    <link href="css/form.css" type="text/css" rel="stylesheet">
+
     <title>Course</title>
 
 </head>
@@ -49,7 +47,7 @@
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">About <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Our Gym</a>
                             </li>
@@ -62,7 +60,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">Instructors <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Instructors of the month</a>
                             </li>
@@ -71,7 +69,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown"  data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" data-hover="dropdown" data-animations="pulse fadeInLeft pulse fadeInRight">Courses <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="allcourses.html">All courses</a>
                             </li>
@@ -143,17 +141,19 @@
         <div class="jumbotron">
             <h1>What is this course about</h1>
             <div class="row">
-                <div class='col-md-7'>
-                    <h3> Category: <a href="pova.html" id="Category"></a></h3>
+                <div class='col-xs-12 col-md-7'>
+                    <h3>Category: <a href="#" id="Category"></a></h3>
                     <h3>Description:</h3>
                     <div class="textdiv" id="Description"></div>
-                    <h3>Difficulty: <div class="thumbnail"><img id="Difficulty" src="" alt="Difficulty not found"></img></div></h3>
+                    <h3 id="Difficulty"></h3>
                     <h3>Target:</h3>
                     <div class="textdiv" id="Target">
                     </div>
                 </div>
-                <div class='col-md-5'>
-                    <img src="" alt="Course image not available" id="Courseimage" class="img-responsive thumbnail" />
+                <div class="col-xs-12 col-md-5">
+                    <div class="thumbnail">
+                        <img src="" alt="..." id="Courseimage">
+                    </div>
                 </div>
             </div>
         </div>
@@ -172,12 +172,16 @@
         <div class="jumbotron">
             <h1>Rooms</h1>
             <div class="row">
-                <div class='col-xs-12 col-md-4'>
-                    This course will be held in
-                    <a href="" id="Room"></a>
+                <div class='col-xs-12 col-md-6'>
+                    <p>
+                        This course will be held in
+                        <a href="" id="Room"></a>
+                    </p>
                 </div>
-                <div class='col-xs-12 col-md-8'>
-                    <img src="" alt="Room image not available" id="roomimage" class="img-responsive thumbnail" />
+                <div class='col-xs-12 col-md-6'>
+                    <div class="thumbnail">
+                        <img src="" alt="Room image not available" id="roomimage" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -208,26 +212,30 @@
 
         <!--        section of the enroll form-->
         <span class="anchor" id="Enr"></span>
-        <div class="jumbotron">         
-        <form action="/">
-            <h1>Enroll in this Course</h1>
-            <hr>
-            <h3 id="Price"></h3>
-            <div>
-                
-                  <label id="icon" for="name"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></label>
-                  <input type="text" name="name" id="name" placeholder="Email" required/>
-                  <br>
-                  <label id="icon" for="name"><span class="glyphicon glyphicon-user" aria-hidden="true"></span></label>
-                  <input type="text" name="name" id="name" placeholder="Name" required/>
-                  <br>
-                  <label id="icon" for="name"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span></i></label>
-                  <input type="password" name="name" id="name" placeholder="Password" required/>
-            </div>
-            <hr>
-           <a href="#" class="button">Register</a><br>
-                You will be redirect to our payment platform
-    </form>
+        <div class="jumbotron">
+            <form action="/">
+                <h1>Enroll in this Course</h1>
+                <hr>
+                <h3 id="Price"></h3>
+                <div>
+
+                    <label id="icon" for="name"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Email" required/>
+                    <br>
+                    <label id="icon" for="name"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    </label>
+                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                    <br>
+                    <label id="icon" for="name"><span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+                        </i>
+                    </label>
+                    <input type="password" name="name" id="name" placeholder="Password" required/>
+                </div>
+                <hr>
+                <a href="#" class="button">Register</a>
+                <br> You will be redirect to our payment platform
+            </form>
         </div>
     </div>
 
