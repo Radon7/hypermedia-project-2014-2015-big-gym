@@ -40,7 +40,7 @@ function getInstructorInfo(variable) {
             }
             
             //carico la gallery
-            $("#gallery").html('<div class="item active"><img src="'+'./img/instructors/'+instr[0].image_1+'" alt="..."></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Chania"></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Flower"></div>' );
+            $("#gallery").html('<div class="item active"><img  class="img-responsive center-block" src="'+'./img/instructors/'+instr[0].image_1+'" alt="..."></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Chania"></div><div class="item"><img src="./img/instructors/'+instr[0].image_1+'" alt="Flower"></div>' );
             
             //load the twitter account info
             $(".twitter-timeline").attr("href", "https://twitter.com/"+instr[0].twitter_account);
