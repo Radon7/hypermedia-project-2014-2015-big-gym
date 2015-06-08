@@ -38,7 +38,7 @@ function getLocationValue(string){
     }
 }
 
-function getFromDB(id, nav){
+function getFromDB(id, cgt){
     $.ajax({
         method: "POST",
         //dataType: "json", //type of data
@@ -59,7 +59,7 @@ function getFromDB(id, nav){
             $(".navbar-inverse").css('background-size','cover');
 
             $("#gobacklink").html("Go back to the " + courses[0].category_name + " category");
-            if(cgt = 1){
+            if(cgt == 1){
                 $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
                 console.log("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
             }else{
