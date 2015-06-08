@@ -58,7 +58,7 @@ function getFromDB(id, cgt){
             $(".navbar-inverse").css('-o-background-size','cover');
             $(".navbar-inverse").css('background-size','cover');
 
-            $("#gobacklink").html("Go back to the " + courses[0].category_name + " category");
+            $("#gobacklink").html("Go to the " + courses[0].category_name + " category");
             if(cgt == 1){
                 $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
                 console.log("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
@@ -66,18 +66,14 @@ function getFromDB(id, cgt){
                 $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid);
                 console.log("href","category.html?id=" + courses[0].categoryid);
             }
-            
 
             var result = "<div class='row'>";
-            var j = 0;
             for(var i = 0; i < courses.length; i++){
-
                 console.log("posizione " + i + " Course " + courses[i].course_name);
-                if(j%3 == 0){
+                if(i%4 == 0){
                     result = result + "</div> <div class='row'>";
                 }
-                result = result + " <div class='col-xs-12 col-sm-6 col-md-4'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].thumbnail + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'><a href='course.html?id=" + courses[i].course_id + "'><h3>" + courses[i].course_name + "</h3></a></div></div></div>";
-                j++;
+                result = result + " <div class='col-xs-12 col-sm-6 col-md-3'> <div class='thumbnail'> <img src='img/courses/"+ courses[i].thumbnail + "' alt='Image not available, sorry.' class='img-responsive'><div class='caption'><a href='course.html?id=" + courses[i].course_id + "'><h3>" + courses[i].course_name + "</h3></a></div></div></div>";
             }
             result = result + "</div></div>";
             $("#thumblist").html(result);
