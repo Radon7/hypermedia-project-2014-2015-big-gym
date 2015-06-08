@@ -3,12 +3,13 @@ function ready(){
 
     //get the parameter from the url
     var category = getLocationValue("id");
-    var navigation = 1;//getLocationValue("nav");
+    
+    var cgt = getLocationValue("cgt");
 
     console.log("category " + category);
-    console.log("nav " + navigation);
+    console.log("cgt " + cgt);
 
-    getFromDB(category, navigation);
+    getFromDB(category, cgt);
 }
 
 function getLocationValue(string){
@@ -57,12 +58,15 @@ function getFromDB(id, nav){
             $(".navbar-inverse").css('-o-background-size','cover');
             $(".navbar-inverse").css('background-size','cover');
 
-            if(nav == 1){
-                $("#gobacklink").html("Go back to the " + courses[0].category_name + " category");
-                $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid);
+            $("#gobacklink").html("Go back to the " + courses[0].category_name + " category");
+            if(cgt = 1){
+                $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
+                console.log("href","category.html?id=" + courses[0].categoryid + "&cgt=1");
             }else{
-                $("#navigationdiv").css('visibility', 'hidden');
+                $("#gobacklink").attr("href","category.html?id=" + courses[0].categoryid);
+                console.log("href","category.html?id=" + courses[0].categoryid);
             }
+            
 
             var result = "<div class='row'>";
             var j = 0;
