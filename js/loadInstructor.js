@@ -14,6 +14,7 @@ function readyf() {
     getInstructorInfo(id);
     getCourses(id);
     getCategories(id);
+    getTwitter();
 }
 
 function getInstructorInfo(variable) {
@@ -125,4 +126,37 @@ function getQueryVariable(variable) {
         }
     }
     return (false);
+}
+
+
+function getTwitter(){
+    $.ajax({
+        method: "POST",
+        //dataType: "json", //type of data
+        crossDomain: true, //localhost purposes
+        url: "http://bigym.altervista.org/php/getTwitterFeed.php", //Relative or absolute path to file.php file
+        data: {
+            id: id
+        },
+        success: function (response) {
+            console.log(JSON.parse(response));
+            var tweets = JSON.parse(response);
+            console.log(tweets);
+            $("#tweet-title").html("<p><b>Latest Tweets by <a href='https://twitter.com/"+tweets[0].user.screen_name+"'>    @" + tweets[0].user.screen_name + "</a><b/></p>");
+            var el = "";
+            for (var i =0; i<tweets.length; i++){
+                
+                el += "<tr><td class='column'><div class='col-xs-3 col-md-3'><img class='pic' src='"+tweets[i].user.profile_image_url+"'/></div>"  +"<div class='col-xs-8 col-md-9'><div class='tweet'>"+tweets[i].text +"</div></div>";
+                if(tweets[i].entities.hasOwnProperty('media')){
+                    el += "<div class='col-md-12 col-xs-12'><img class='img-responsive pic' src='" + tweets[i].entities.media[0].media_url +"'/></div>";
+                }
+            
+                el+="</td></tr>";
+            }
+            $("#tweet-body").html(el);
+        },
+        error: function (request, error) {
+            console.log("Error");
+        }
+    });
 }
