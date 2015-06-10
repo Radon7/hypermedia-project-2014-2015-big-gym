@@ -4,4 +4,69 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+    padding-top: 70px;
 }
+
+@media (max-width: 767px) {
+     body {
+         padding-top: 50px;
+     }
+}
+
+.row{
+    text-align: center;
+}
+
+h1{
+    color: white;
+    font-size: 5em;
+}
+
+
+header {
+    text-align: center;
+    color: #fff;
+}
+
+header .intro-text {
+    padding-top: 35%;
+}
+
+header .intro-text .intro-lead-in {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 22px;
+}
+
+header .intro-text .intro-heading {
+    margin-bottom: 25px;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 50px;
+}
+
+b{
+    font-weight: 700;
+}
+
+@media(min-width:768px) {
+    header .intro-text {
+        padding-top: 15%;
+    }
+
+    header .intro-text .intro-lead-in {
+        margin-bottom: 25px;
+        font-size: 20px;
+        font-style: italic;
+        line-height: 20px;
+    }
+
+    header .intro-text .intro-heading {
+        margin-bottom: 15px;
+        font-size: 75px;
+        font-weight: 100;
+        line-height: 75px;
+    }
+}
+
