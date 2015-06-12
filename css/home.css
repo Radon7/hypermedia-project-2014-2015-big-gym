@@ -1,27 +1,51 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+
 body {
-  background: url(../img/home-banner-2.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    /* Margin bottom by footer height */
+    margin-bottom: 80px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 80px;
+}
+
+.footertext {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: center;
+}
+/* -------------------------------------------------- */
+
+body {
+    background: url(../img/home-banner-2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     padding-top: 70px;
 }
 
 @media (max-width: 767px) {
-     body {
-         padding-top: 50px;
-     }
+    body {
+        padding-top: 50px;
+    }
 }
 
-.row{
+.row {
     text-align: center;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 5em;
 }
-
 
 header {
     text-align: center;
@@ -46,7 +70,7 @@ header .intro-text .intro-heading {
     line-height: 50px;
 }
 
-b{
+b {
     font-weight: 700;
 }
 
@@ -54,14 +78,12 @@ b{
     header .intro-text {
         padding-top: 15%;
     }
-
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-size: 20px;
         font-style: italic;
         line-height: 20px;
     }
-
     header .intro-text .intro-heading {
         margin-bottom: 15px;
         font-size: 75px;
@@ -69,4 +91,3 @@ b{
         line-height: 75px;
     }
 }
-

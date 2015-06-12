@@ -1,0 +1,29 @@
+body {
+    padding-top: 0px;
+}
+
+.no-print {
+    display: none;
+}
+
+img {
+    display: none !important;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.thumbnail {
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+a[href]:after {
+    content: none;
+  }
+
+h3 {
+    margin: 0px;
+}

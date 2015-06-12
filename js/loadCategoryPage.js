@@ -90,7 +90,7 @@ function getCatInstructorsList(id) {
             var instructors=JSON.parse(response);
             //Instructors of the category
             for(var i=0; i < instructors.length; i++) {
-                    result = result + "<div class='col-xs-12 col-sm-6 col-md-4'> <div class='thumbnail'> <img src='img/instructors/"+instructors[i].image_1+"' alt='...' <div class='caption'> <a href='instructor.html?id=" + instructors[i].id + "'> <h3>" + instructors[i].name + " "+ instructors[i].surname + " </h3> </a> </div> </div> </div>";
+                    result = result + "<div class='col-xs-12 col-sm-6 col-md-4'> <div class='thumbnail'> <img src='img/instructors/"+instructors[i].image_1+"' alt='...'> <div class='caption'> <a href='instructor.html?id=" + instructors[i].id + "'> <h3>" + instructors[i].name + " "+ instructors[i].surname + " </h3> </a> </div> </div> </div>";
                 }
             $("#cat_instructors_list").html(result);
             },
