@@ -1,9 +1,10 @@
-.navbar-inverse {
-    background: url(../img/contact-us-header.jpg);
-                -webkit-background-size: cover;
-                -moz-background-size: cover;
-                -o-background-size: cover;
-                background-size: cover;
-    z-index: 999;
+ #map-canvas {
+            height: 350px;
+            margin: 0px;
+            padding: 0px
+        }
 
+address {
+    font-size: 21px;
+    font-weight: 200;
 }
