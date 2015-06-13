@@ -6,7 +6,7 @@
 }
 
 #credits {
-    padding-top: 50px;
+    padding-top: 11%;
 }
 
 body {
@@ -21,6 +21,9 @@ body {
 @media (max-width: 767px) {
     body {
         padding-top: 50px;
+    }
+    #credits{
+        padding-top: 29%;
     }
 }
 
@@ -75,5 +78,15 @@ b {
         font-size: 75px;
         font-weight: 100;
         line-height: 75px;
+    }
+}
+
+@media screen and (max-device-width: 767px) and (orientation : landscape){
+    header .intro-text {
+        padding-top: 5%;
+    }
+    
+    #credits{
+        padding-top: 31px;
     }
 }
