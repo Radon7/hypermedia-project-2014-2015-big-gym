@@ -1,27 +1,13 @@
-/* Sticky footer styles
--------------------------------------------------- */
-
-
-body {
-    /* Margin bottom by footer height */
-    margin-bottom: 80px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* Set the fixed height of the footer here */
-    height: 80px;
-}
-
 .footertext {
     color: #ffffff;
     font-size: 15px;
     font-weight: 100;
     text-align: center;
 }
-/* -------------------------------------------------- */
+
+#credits {
+    padding-top: 50px;
+}
 
 body {
     background: url(../img/home-banner-2.jpg) no-repeat center center fixed;
