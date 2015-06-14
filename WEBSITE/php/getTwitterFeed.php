@@ -1,6 +1,6 @@
 <?php
 //get all the info about an instructor
-$id = 3;// $_POST['id'];
+$id = $_POST['id'];
 
 
 
@@ -24,7 +24,6 @@ else {
         if($row = $result->fetch_array(MYSQL_ASSOC)) {
             $twitter = $row["twitter_account"];
         }
-        echo $twitter;
     }
 
     //free result
@@ -40,8 +39,8 @@ else {
     $notweets = 30;
     $consumerkey = "ll1h5br2Tzmpo5bDRTCs91zF3";
     $consumersecret = "Oq4eD5KsDnBomwUJSqtZEQCBbx8RrTMtZXoHeLWKaAymfYqk7i";
-    $accesstoken = "Oq4eD5KsDnBomwUJSqtZEQCBbx8RrTMtZXoHeLWKaAymfYqk7i";
-    $accesstokensecret = "ll1h5br2Tzmpo5bDRTCs91zF3";
+    $accesstoken = "3306991072-ts9tmjtqqjfOZtMWCZOp3w94VDgg6k9YzvQduV6";
+    $accesstokensecret = "LOAAGqMlitBchqNXPdDAKkKer8G2kTdwd780Zebrr0SM3";
 
     function getConnectionWithAccessToken($cons_key, $cons_secret, $oauth_token, $oauth_token_secret) {
         $connection = new TwitterOAuth($cons_key, $cons_secret, $oauth_token, $oauth_token_secret);
